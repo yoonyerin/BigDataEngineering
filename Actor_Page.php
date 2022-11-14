@@ -38,7 +38,8 @@
             <input id='searchEvent' type="text" name="input_event" placeholder="search keyword">
             <input id='searchButton' type="submit" value="ENTER" >
         </form>
-        <p class="recent_keyword_title">Recently Searched</p>
+        <br><b class="recent_keyword_title"> Recently Searched</b>
+        <button class="delete_keyword">Delete Keyword</button>
         <table class="recent_keyword_table">
             <tr>
                 <td>현빈</td>
@@ -186,7 +187,8 @@
                 document.getElementById('myLineChart'),
                 config2
             );
-            </script> 
+            </script>
+            <h3 class="average">10년간 평균 영화 촬영 수: {php}개</h3> 
         </div> 
     </div>
   

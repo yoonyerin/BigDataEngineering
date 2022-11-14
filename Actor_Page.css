@@ -256,3 +256,11 @@ position: absolute;z-index: 1;
     text-align: center;
     
 }
+.delete_keyword{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 15px;
+    background-color:#00462A ;
+    color: white;
+    border-radius: 5px;
+}
