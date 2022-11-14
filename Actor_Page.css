@@ -249,3 +249,10 @@ position: absolute;z-index: 1;
     font-style: italic;
     color: #00462A;
 }
+.average{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    
+}
