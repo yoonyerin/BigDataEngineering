@@ -38,6 +38,16 @@
             <input id='searchEvent' type="text" name="input_event" placeholder="search keyword">
             <input id='searchButton' type="submit" value="ENTER" >
         </form>
+        <p class="recent_keyword_title">Recently Searched</p>
+        <table class="recent_keyword_table">
+            <tr>
+                <td>현빈</td>
+                <td>김혜수</td>
+                <td>강동원</td>
+                <td>한소희</td>
+                <td>원빈</td>
+            </tr>
+        </table>
     </div>
     <hr>
     <div class="div_result">

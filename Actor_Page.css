@@ -244,4 +244,8 @@ position: absolute;z-index: 1;
 .text_green {
     color: #00462A;
 }
-
+.recent_keyword_title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+}
