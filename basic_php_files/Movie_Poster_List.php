@@ -1,6 +1,6 @@
 <?php
 /* mysql 연결하는 부분 */
-include 'mysql_connect.php';
+
 
 
 /* 찾아지는 movie_list에서 poster 띄워주는 함수 */

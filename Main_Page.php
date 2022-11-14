@@ -18,8 +18,9 @@
         }
     </script>
     <?php
+      include("./basic_php_files/mysql_connect.php");
       include("./basic_php_files/Main_Page_Layout.php");
-      $rank_arr=array("popularity", "average", "revenue");
+      $rank_arr=array("popularity", "vote_average", "vote_count");
     ?>
 
 </head>
@@ -74,10 +75,7 @@
         </div>
         
         <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
-            <h2 class="text_rank_green">2</h2>
-            <h2 class="text_rank_green">3</h2>
-            <h2 class="text_rank_green">4</h2>
+        <?php img_layout($mysqli, $rank_arr[0]) ?>
         </div>
         <!-- 
             데이터: 영화 포스터 이미지
@@ -85,8 +83,7 @@
             데이터가 들어갈 위치: <img class="img_rank_list" src="[실제 데이터]" alt="My Image">
             비고: X
         -->
-         
-        <?php img_layout($mysqli, $rank_arr[0]) ?>
+           
 
 
         <!-- 별점에 따른 영화 순위 -->
@@ -95,10 +92,7 @@
         </div>
 
         <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
-            <h2 class="text_rank_green">2</h2>
-            <h2 class="text_rank_green">3</h2>
-            <h2 class="text_rank_green">4</h2>
+        <?php img_layout($mysqli, $rank_arr[1]) ?>
         </div>
         <!-- 
             데이터: 영화 포스터 이미지
@@ -106,8 +100,6 @@
             데이터가 들어갈 위치: <img class="img_rank_list" src="[실제 데이터]" alt="My Image">
             비고: X
         -->
-        <?php img_layout($mysqli, $rank_arr[1]) ?>
-
 
         <!-- 수익에 따른 영화 순위 -->
         <div class="div_ott_section">
@@ -115,10 +107,7 @@
         </div>
 
         <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
-            <h2 class="text_rank_green">2</h2>
-            <h2 class="text_rank_green">3</h2>
-            <h2 class="text_rank_green">4</h2>
+        <?php img_layout($mysqli, $rank_arr[2]) ?>
         </div>
         <!-- 
             데이터: 영화 포스터 이미지
@@ -126,7 +115,7 @@
             데이터가 들어갈 위치: <img class="img_rank_list" src="[실제 데이터]" alt="My Image">
             비고: X
         -->
-        <?php img_layout($mysqli, $rank_arr[2]) ?>
+        
     </div>
 
     <!-- modal 영역 -->
