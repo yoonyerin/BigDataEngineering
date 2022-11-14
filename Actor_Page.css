@@ -259,8 +259,13 @@ position: absolute;z-index: 1;
 .delete_keyword{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    font-size: 15px;
+    font-size: 13px;
     background-color:#00462A ;
     color: white;
     border-radius: 5px;
+}
+.btn_movie_detail {
+border: 0px solid #00462A;
+background-color:transparent;
+display: inline-block;
 }

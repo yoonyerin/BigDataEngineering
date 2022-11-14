@@ -137,4 +137,18 @@ margin-left: 20px;
 .div_movie_list{
     text-align: center;
 }
-    
+.btn_movie_detail {
+    border: 0px solid #00462A;
+    background-color:transparent;
+    display: inline-block;
+    }    
+.img_movie_list {
+        display: inline-block;
+        margin-left: 20px;
+        flex: 1;
+        filter: brightness(1);
+        transition: 0.8s;
+    }
+.img_movie_list:hover {
+        filter: brightness(0.5);
+    }    
