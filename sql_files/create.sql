@@ -11,7 +11,7 @@ use team19;
 CREATE TABLE IF NOT EXISTS movies_ott(
     mid INTEGER, netflix INTEGER,amazon_prime INTEGER, disney_plus INTEGER, hulu INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
+    popularity FLOAT, production_countries VARCHAR(100), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS movies_ott(
 CREATE TABLE IF NOT EXISTS movies_netflix(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
+    popularity FLOAT, production_countries VARCHAR(100), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS movies_netflix(
 CREATE TABLE IF NOT EXISTS movies_amazon_prime(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
+    popularity FLOAT, production_countries VARCHAR(100), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS movies_amazon_prime(
 CREATE TABLE IF NOT EXISTS movies_disney_plus(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
+    popularity FLOAT, production_countries VARCHAR(100), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS movies_disney_plus(
 CREATE TABLE IF NOT EXISTS movies_hulu(
     mid INTEGER,
     original_title VARCHAR(100),homepage VARCHAR(100), overview TEXT,
-    popularity FLOAT, production_countries VARCHAR(20), release_date DATE,
+    popularity FLOAT, production_countries VARCHAR(100), release_date DATE,
     revenue INTEGER, runtime FLOAT, spoken_languages VARCHAR(20), vote_average FLOAT, vote_count INTEGER,
     genres_1 VARCHAR(20), genres_2 VARCHAR(20), genres_3 VARCHAR(20), 
     keywords_1 VARCHAR(20), keywords_2 VARCHAR(20), keywords_3 VARCHAR(20)

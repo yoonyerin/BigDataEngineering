@@ -25,7 +25,6 @@
                     <li><a class="text_green" onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                     <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                     <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
-<<<<<<< HEAD
                     <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
                     <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
                 </ul>
