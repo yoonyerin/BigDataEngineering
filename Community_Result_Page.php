@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Result_Page</title>
+    <title>Community_Page</title>
     <link href="Result_Page.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
