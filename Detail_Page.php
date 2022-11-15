@@ -20,7 +20,7 @@
                 <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                 <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                 <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
-                <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
+                <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
                 <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>

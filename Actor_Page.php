@@ -20,7 +20,7 @@
                 <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                 <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                 <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
-                <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
+                <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
                 <li><a class="text_green" onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>
@@ -38,6 +38,17 @@
             <input id='searchEvent' type="text" name="input_event" placeholder="search keyword">
             <input id='searchButton' type="submit" value="ENTER" >
         </form>
+        <br><b class="recent_keyword_title"> Recently Searched</b>
+        <button class="delete_keyword">Delete Keyword</button>
+        <table class="recent_keyword_table">
+            <tr>
+                <td>현빈</td>
+                <td>김혜수</td>
+                <td>강동원</td>
+                <td>한소희</td>
+                <td>원빈</td>
+            </tr>
+        </table>
     </div>
     <hr>
     <div class="div_result">
@@ -49,15 +60,17 @@
         </div>
         <!-- TABLE: Korean Actor 
         DATA: name={배우이름}에 해당하는 영화의 포스터 url-->
+
         <div class="div_movie_list">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+        <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
             <!-- 반복문 종료 -->
         </div>
     </div> 
@@ -176,7 +189,8 @@
                 document.getElementById('myLineChart'),
                 config2
             );
-            </script> 
+            </script>
+            <h3 class="average">10년간 평균 영화 촬영 수: {php}개</h3> 
         </div> 
     </div>
   

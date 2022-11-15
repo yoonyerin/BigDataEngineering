@@ -244,4 +244,28 @@ position: absolute;z-index: 1;
 .text_green {
     color: #00462A;
 }
-
+.recent_keyword_title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+}
+.average{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #00462A;
+    text-align: center;
+    
+}
+.delete_keyword{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 13px;
+    background-color:#00462A ;
+    color: white;
+    border-radius: 5px;
+}
+.btn_movie_detail {
+border: 0px solid #00462A;
+background-color:transparent;
+display: inline-block;
+}
