@@ -74,9 +74,8 @@
             <h2 class="text_subtitle">AWARENESS</h2>
         </div>
         
-        <div class="div_rank_list_text">
         <?php img_layout($mysqli, $rank_arr[0]) ?>
-        </div>
+
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
@@ -90,10 +89,8 @@
         <div class="div_ott_section">
             <h2 class="text_subtitle">RATING</h2>
         </div>
-
-        <div class="div_rank_list_text">
         <?php img_layout($mysqli, $rank_arr[1]) ?>
-        </div>
+
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
@@ -106,9 +103,8 @@
             <h2 class="text_subtitle">PROFIT</h2>
         </div>
 
-        <div class="div_rank_list_text">
         <?php img_layout($mysqli, $rank_arr[2]) ?>
-        </div>
+ 
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
