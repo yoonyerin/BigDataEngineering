@@ -25,7 +25,7 @@
         $movie_list=mysqli_query($mysql, $sql1 . " between '" . $starting . "-01-01' and '" . $ending . "-12-31'");
         if ($starting == 0 ) {
             $text='~'.$ending;
-        } elseif($ending % 5 != 0) {
+        } elseif($ending >= date('Y') ) {
             $text=$starting . '~';
         } else {
             $text=$starting . '~' . $ending;

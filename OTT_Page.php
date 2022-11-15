@@ -60,7 +60,7 @@ $val_count = mysqli_num_rows($movie_list);
 
     <!-- 사용자가 선택한 OTT에 따른 영화를 보여주는 section -->
     <div class="div_ott_section">
-        <h2 class="text_subtitle"><?php echo $text;?></h2>
+        <h2 class="text_subtitle"><?=$text?></h2>
     </div>
 
     <div class="div_ottmovie_section">

@@ -101,3 +101,9 @@ CREATE TABLE IF NOT EXISTS user_fav_db (
     user_id int(11) NOT NULL PRIMARY KEY,
     mid varchar(100) DEFAULT NULL
 ) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+-- user_search_db
+CREATE TABLE IF NOT EXISTS user_search_db (
+    user_id int(11),
+    search1 varchar(100), search2 varchar(100), search3 varchar(100), search4 varchar(100), search5 varchar(100)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;

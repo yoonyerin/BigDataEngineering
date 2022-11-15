@@ -1,6 +1,6 @@
 <?php include './basic_php_files/mysql_connect.php';
 
-if($_GET['lan']=='eng') {$eng=1;} else {$eng=0;}
+if($_GET['lan']=='eng') {$eng=TRUE;} else {$eng=FALSE;}
 if($eng) {
     $sql = 'select * , year(release_date) as release_year from movies_ott where mid = '.$_GET['movie_id'];
     $poster_sql = 'select * from movies_poster where mid = '.$_GET['movie_id'];
@@ -9,7 +9,7 @@ if($eng) {
     $movie = mysqli_fetch_array($result);
     $poster = mysqli_fetch_array($poster_res);
 } else {
-    $sql = 'select * as release_year from movies_korean where mid = '.$_GET['movie_id'];
+    $sql = 'select * from movies_korean where mid = '.$_GET['movie_id'];
     $poster_sql = 'select * from movies_kor_poster where mid = '.$_GET['movie_id'];
     $result = mysqli_query($mysqli, $sql);
     $poster_res = mysqli_query($mysqli, $poster_sql);

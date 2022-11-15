@@ -77,25 +77,21 @@
     /* requirement satisfying rollup */
     $groupby_with_rollup_sql = "select decade, decade5, count(*) as counting from (select ceil(year(release_date) / 10) * 10 as decade, ceil(year(release_date) / 5) * 5 as decade5 from movies_ott) t group by decade, decade5 with rollup";
     $movie_count_list=mysqli_query($mysqli, $groupby_with_rollup_sql);
-
+    
+    /* 반복문을 통해서 영화 보여주기 */
+    $end_year = 1980;
+    $index = 1;
+    while ($end_year < date('Y')) {
+        $end_year = $end_year + 10;
+        if ($end_year == 1990) {
+            #연도별 (end_year-9~end_year) 영화 포스터 및 개수를 보여주는 section
+            season_poster($mysqli, $movie_count_list, 0, $end_year, $index, 'h2_text', 'btn_movie_detail', 10);
+        } else {
+            season_poster($mysqli, $movie_count_list, $end_year-9, $end_year, $index, 'h2_text', 'btn_movie_detail', 10);
+        }
+        $index = $index + 1;
+    }
     ?>
-    <!-- 연도별(~1990) 영화 이미지 포스터 및 개수를 보여주는 section -->
-    <?php season_poster($mysqli, $movie_count_list, 0, 1990, '1', 'h2_text', 'btn_movie_detail', 10);?>
-
-    <!-- 연도별(1991~2000) 영화 포스터 및 개수를 보여주는 section -->
-    <?php season_poster($mysqli, $movie_count_list, 1991, 2000, '2', 'h2_text', 'btn_movie_detail', 10);?>
-
-    <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <?php season_poster($mysqli, $movie_count_list, 2001, 2010, '3', 'h2_text', 'btn_movie_detail', 10);?>
-
-    <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <?php season_poster($mysqli, $movie_count_list, 2011, 2020, '4', 'h2_text', 'btn_movie_detail', 10);?>
-
-    <!-- 연도별(2021~) 영화 포스터 및 개수를 보여주는 section -->
-    <!-- 이하 동일 -->
-    <?php season_poster($mysqli, $movie_count_list, 2021, date('Y'), '5', 'h2_text', 'btn_movie_detail', 10);?>
 
 </body>
 </html>
