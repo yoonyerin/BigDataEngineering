@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Genre_Page</title>
-    <link href="Genre_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <link href="Genre_Page.css?ver=1.10" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -24,7 +24,7 @@
                 <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                 <li><a class="text_green" onclick="location.href='Genre_Page.php'">GENRE</a></li>
                 <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
-                <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
+                <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
                 <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>

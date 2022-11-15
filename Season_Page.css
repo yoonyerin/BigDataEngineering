@@ -39,7 +39,6 @@
 
 .div_movie_list {
     width: 96%;
-    height: 250px;
     overflow: auto;
     white-space: nowrap;
     margin: 20px auto 20px auto;
@@ -212,6 +211,7 @@ position: absolute;z-index: 1;
     display: inline-block;
     margin-left: 20px;
     flex: 1;
+    filter: brightness(1);
     transition: 0.8s;
 }
 .img_movie_list:hover {
