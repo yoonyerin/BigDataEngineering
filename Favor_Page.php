@@ -1,7 +1,4 @@
-<?php
-include './basic_php_files/mysql_connect.php';
-
-?>
+<?php include './basic_php_files/mysql_connect.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +25,13 @@ include './basic_php_files/mysql_connect.php';
                     <li><a class="text_green" onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                     <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                     <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
+<<<<<<< HEAD
                     <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
                     <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
+=======
+                    <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
+                    <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
+>>>>>>> 365e9f53f78dcfb7c281df0b45d3b9b40eb5428d
                 </ul>
             </nav>
         </div>
@@ -55,19 +57,6 @@ include './basic_php_files/mysql_connect.php';
                 <button class="btn_ott_select" type="submit" name="ott_name" value="hulu"><img class="img_ott_select" src="images/hulu.png" alt="hulu"></button>
             </div>
         </form>
-
-        <!--원래 수민이 코드
-        <div class="div_ott_select">
-            <img class="img_ott_select" src="images/netflex.png" alt="My Image">
-            <img class="img_ott_select" src="images/disney.png" alt="My Image">
-            <img class="img_ott_select" src="images/prime.png" alt="My Image">
-            <img class="img_ott_select" src="images/hulu.png" alt="My Image">
-        </div>
-        -->
-
-
-
-
     </div>
 
     <hr class="hr_division">
@@ -106,7 +95,7 @@ include './basic_php_files/mysql_connect.php';
                         <input type="checkbox" name="fav_mids[]" value="'. $mid . '"id="'. $mid .'"/>
                         <span class="on"></span>
                         선택
-                        </label>
+                    </label>
                 </div>';
                 $line_changer=$line_changer+1;
                 if ($line_changer%4==0){

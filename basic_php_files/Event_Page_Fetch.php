@@ -6,7 +6,7 @@ include 'Movie_Poster_List.php';
 function event_poster($mysql, $text, $ind, $class_name, $button_class) {
   switch ($ind) {
     case '1': #christmas
-      $sql1 = "select * from movies_ott where overview like '%christmas%' or overview like '%winter%'";
+      $sql1 = "select * from movies_ott where overview like '%christmas%' or overview like '%winter%winter%' or overview like '%santa%' or overview like '%snow%'";
       $sql2 = "select count(*) from movies_ott where overview like '%christmas%' or overview like '%winter%'";
       break;
     case '2': #wedding
@@ -22,7 +22,7 @@ function event_poster($mysql, $text, $ind, $class_name, $button_class) {
       $sql2 = "select count(*) from movies_ott where overview like '%school%' or overview like '%teacher%' or overview like '%professor%'";
       break;
     case '5': #birthday
-      $sql1 = "select * from movies_ott where overview like '%birthday%'";
+      $sql1 = "select * from movies_ott where overview like '%birthday%' or overview like '%party%'";
       $sql2 = "select count(*) from movies_ott where overview like '%birthday%'";
       break;
   }

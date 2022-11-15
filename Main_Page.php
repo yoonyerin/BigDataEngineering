@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Main_Page</title>
-    <link href="Main_Page.css?ver=1.03" rel="stylesheet" type="text/css" />
+    <link href="Main_Page.css?ver=1.04" rel="stylesheet" type="text/css" />
 
     <!-- 사용자 이미지 누르면 정보 띄우기 -->
     <script type="text/javascript"> 
@@ -42,8 +42,13 @@
                         <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                         <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                         <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
+<<<<<<< HEAD
                         <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
                         <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
+=======
+                        <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
+                        <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
+>>>>>>> 365e9f53f78dcfb7c281df0b45d3b9b40eb5428d
                     </ul>
                 </nav>
             </div>
@@ -60,8 +65,10 @@
             <h2 class="text_login">로그인이 필요해요 :)</h2>
             <hr class="hr_login_division">
             <div class="div_horizontal">
-                <button id="btn_login_id" class="btn_login">로그인</button>
-                <button class="btn_login">회원가입</button>
+                <button id="btn_login_id" class="hidden">로그인</button>
+                <button id="btn_register_id" class="hidden">회원가입</button>
+                <button id="btn_modify_id" class="btn_login">정보수정</button>
+                <button id="btn_delete_id" class="btn_login">회원탈퇴</button>
             </div>
         </div>
 
@@ -123,22 +130,18 @@
         -->
         
     </div>
-
+    
+    <!-- ////////// -->
     <!-- modal 영역 -->
-    <!-- <div class="modal hidden">
-        <div class="bg"></div>
-        <div class="modalBox">
-            <p>Testing</p>
-            <button class="closeBtn"></button>
-        </div>
-    </div> -->
+    <!-- ////////// -->
 
-    <div class="modal hidden">
-        <div class="bg"></div>
+    <!-- Login_Page Modal -->
+    <div id="id_login_modal" class="modal hidden">
+        <div id="id_login_bg" class="bg"></div>
         <div class="modalBox">
 
         <!-- 오른쪽 상단의 X 버튼 -->
-        <img class="img_btn_close" src="images/btn_close.png" alt="close">
+        <img id="id_login_close" class="img_btn_close" src="images/btn_close.png" alt="close">
                     
             <div class="div_vertical_middle">                
                 <hr class="hr_division">
@@ -151,7 +154,6 @@
                 </div>
 
                 <br>
-
                 <hr class="hr_division">
 
                 <!-- id 입력 -->
@@ -171,7 +173,6 @@
                 </div>
 
                 <br>
-
                 <!-- 로그인 버튼 -->
                 <button class="btn_login_modal" type="submit">LOGIN</button>
 
@@ -194,18 +195,192 @@
         </div>
     </div>
 
+    <!-- Register_Page Modal -->
+    <div id="id_register_modal" class="modal hidden">
+        <div id="id_register_bg" class="bg"></div>
+        <div class="modalBox">
+
+        <img id="id_register_close" class="img_btn_close" src="images/btn_close.png" alt="close">
+            
+            <div class="div_vertical_middle">                
+                <hr class="hr_division">
+                <h2 class="text_gray">JOIN TO</h2>
+
+                <div class="div_logo">
+                    <hr class="hr_logo">
+                    <h1 class="text_logo">WHO's TT</h1>
+                    <hr class="hr_logo">
+                </div>
+
+                <br>
+                <hr class="hr_division">
+
+                <div class="div_horizontal">
+                    <p class="text_green2">이름</p>
+                    <form>
+                        <input class="input_login" type="text" size="15" placeholder="사용자의 이름를 입력하세요.">
+                    </form>
+                </div>
+                
+                <div class="div_horizontal">
+                    <p class="text_green2">비밀번호</p>
+                    <form>
+                        <input class="input_login" type="password" size="15" placeholder="사용자의 비밀번호를 입력하세요.">
+                    </form>
+                </div>
+
+                <div class="div_horizontal">
+                    <p class="text_green2">비밀번호 확인</p>
+                    <form>
+                        <input class="input_login" type="password" size="15" placeholder="비밀번호를 한 번 더 입력하세요.">
+                    </form>
+                </div>
+
+                <div class="div_horizontal">
+                    <p class="text_green2">이메일</p>
+                    <form>
+                        <input class="input_login" type="password" size="15" placeholder="사용자의 이메일을 입력하세요.">
+                    </form>
+                </div>
+
+                <button class="btn_login_modal" type="submit">Confirm</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modify_Page Modal -->
+    <div id="id_modify_modal" class="modal hidden">
+        <div id="id_modify_bg" class="bg"></div>
+        <div class="modalBox">
+
+        <img id="id_modify_close" class="img_btn_close" src="images/btn_close.png" alt="close">
+            
+            <div class="div_vertical_middle">                
+                <hr class="hr_division">
+                <h2 class="text_gray">MODIFY FROM</h2>
+
+                <div class="div_logo">
+                    <hr class="hr_logo">
+                    <h1 class="text_logo">WHO's TT</h1>
+                    <hr class="hr_logo">
+                </div>
+
+                <br>
+                <hr class="hr_division">
+
+                <div class="div_horizontal">
+                    <p class="text_green2">이름</p>
+                    <form>
+                        <input class="input_login" type="text" size="15" placeholder="NEW NAME">
+                    </form>
+                </div>
+                
+                <div class="div_horizontal">
+                    <p class="text_green2">비밀번호</p>
+                    <form>
+                        <input class="input_login" type="password" size="15" placeholder="NEW PW">
+                    </form>
+                </div>
+
+                <div class="div_horizontal">
+                    <p class="text_green2">이메일</p>
+                    <form>
+                        <input class="input_login" type="password" size="15" placeholder="NEW EMAIL">
+                    </form>
+                </div>
+
+                <button class="btn_login_modal" type="submit">Confirm</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Delete_Page Modal -->
+    <div id="id_delete_modal" class="modal hidden">
+        <div id="id_delete_bg" class="bg"></div>
+        <div class="modalBox">
+
+        <img id="id_delete_close" class="img_btn_close" src="images/btn_close.png" alt="close">
+            
+            <div class="div_vertical_middle">                
+                <hr class="hr_division">
+                <h2 class="text_gray">WANT TP DELETE</h2>
+
+                <div class="div_logo">
+                    <hr class="hr_logo">
+                    <h1 class="text_logo">?WHO's TT?</h1>
+                    <hr class="hr_logo">
+                </div>
+
+                <br>
+                <hr class="hr_division">
+                <br><br>
+                
+                <div class="div_horizontal">
+                    <button class="btn_login_modal" type="submit">YES</button>
+                    <button class="btn_login_modal" type="submit">NO</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script>
-        const open = () => {
-            document.querySelector(".modal").classList.remove("hidden");
+        // 로그인
+        const login_open = () => {
+            document.querySelector("#id_login_modal").classList.remove("hidden");
+        }
+        const login_close = () => {
+            document.querySelector("#id_login_modal").classList.add("hidden");
         }
 
-        const close = () => {
-            document.querySelector(".modal").classList.add("hidden");
+        // 회원가입
+        const register_open = () => {
+            document.querySelector("#id_register_modal").classList.remove("hidden");
+        }
+        const register_close = () => {
+            document.querySelector("#id_register_modal").classList.add("hidden");
         }
 
-        document.querySelector("#btn_login_id").addEventListener("click", open);
-        document.querySelector(".img_btn_close").addEventListener("click", close);
-        document.querySelector(".bg").addEventListener("click", close);
+        // 정보수정
+        const modify_open = () => {
+            document.querySelector("#id_modify_modal").classList.remove("hidden");
+        }
+        const modify_close = () => {
+            document.querySelector("#id_modify_modal").classList.add("hidden");
+        }
+
+        // 탈퇴
+        const delete_open = () => {
+            document.querySelector("#id_delete_modal").classList.remove("hidden");
+        }
+        const delete_close = () => {
+            document.querySelector("#id_delete_modal").classList.add("hidden");
+        }
+
+        
+
+        // 로그인 모달창 open OR close
+        document.querySelector("#btn_login_id").addEventListener("click", login_open);
+        document.querySelector("#id_login_close").addEventListener("click", login_close);
+        document.querySelector("#id_login_bg").addEventListener("click", login_close);
+
+        // 회원가입 모달창 open OR close
+        document.querySelector("#btn_register_id").addEventListener("click", register_open);
+        document.querySelector("#id_register_close").addEventListener("click", register_close);
+        document.querySelector("#id_register_bg").addEventListener("click", register_close);
+
+        // 정보수정 모달창 open OR close
+        document.querySelector("#btn_modify_id").addEventListener("click", modify_open);
+        document.querySelector("#id_modify_close").addEventListener("click", modify_close);
+        document.querySelector("#id_modify_bg").addEventListener("click", modify_close);
+
+        // 회원탈퇴 모달창 open OR close
+        document.querySelector("#btn_delete_id").addEventListener("click", delete_open);
+        document.querySelector("#id_delete_close").addEventListener("click", delete_close);
+        document.querySelector("#id_delete_bg").addEventListener("click", delete_close);
+        
 
     </script>
 

@@ -48,14 +48,21 @@
             <!-- php 검색한 키워드로 검색 결과 노출 기능--> 
             <!-- 테이블, 필드값: movie TABLE image url
             데이터 위치: src= 링크 -->
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
-            <button class="btn_movie_detail" type="submit" name="movie_id" value="'.$movie['mid'].'"><img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image"></button>
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/a91e9hpWwfCqxJI4xM9Q2RhuxgI.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/sLTAEFtjentQ5satiGdmv7o2f1C.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/mYLOqiStMxDK3fYZFirgrMt8z5d.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/kGmpIkjVRWHQ97AiEXC0pLt5VtY.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/a91e9hpWwfCqxJI4xM9Q2RhuxgI.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/sLTAEFtjentQ5satiGdmv7o2f1C.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/mYLOqiStMxDK3fYZFirgrMt8z5d.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/kGmpIkjVRWHQ97AiEXC0pLt5VtY.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/77OM9jMJ8nglaolHLwrAW7kvadV.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/S6fDnntDjduIWuLW2GcqFasobD.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/lM2K5eGz9kvrYRi366wEzVwC8Tb.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/vctfqwx6YYEml0iVEDxfnTnY2vn.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/S6fDnntDjduIWuLW2GcqFasobD.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/lM2K5eGz9kvrYRi366wEzVwC8Tb.jpg" alt="My Image" >
+            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/vctfqwx6YYEml0iVEDxfnTnY2vn.jpg" alt="My Image" >
             <!-- 반복문 종료 -->
         </div>
     </div>   

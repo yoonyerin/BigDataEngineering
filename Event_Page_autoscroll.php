@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Event_Page</title>
-    <link href="Event_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <link href="Event_Page.css?ver=1.01" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="div_mainbar">
@@ -22,8 +22,13 @@
                 <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                 <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                 <li><a class="text_green" onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
+<<<<<<< HEAD
                 <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
                 <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
+=======
+                <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
+                <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
+>>>>>>> 365e9f53f78dcfb7c281df0b45d3b9b40eb5428d
             </ul>
         </nav>
         </div>
