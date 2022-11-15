@@ -101,7 +101,7 @@ function actors_movie_year($mysqli, $query){
         config2
     );
     </script>
-    <h3 class=>10년간 평균 영화 촬영 수: ".(string)$avg."개</h3> 
+    <h3 class=average>10년간 평균 영화 촬영 수: ".(string)$avg."개</h3> 
     ";    
 }
 
@@ -145,7 +145,7 @@ function actors_movie_genre($mysqli, $query){
 
     echo "<div class='div_stat'>
     <div class='div_horizontal_left'>
-        <h2 class='h2_text'>Statistics By Genre".$print_label."</h2>
+        <h2 class='h2_text'>Statistics By Genre</h2>
         <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
         <div>
         <canvas id='myChart'></canvas>
@@ -192,8 +192,7 @@ function actors_movie_genre($mysqli, $query){
         document.getElementById('myChart'),
         config
     );
-    </script> 
-</div>";
+    </script> </div>";
 
 
 

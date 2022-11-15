@@ -11,8 +11,7 @@
     <?php include("./basic_php_files/actor_page_img_layout.php");?>
 </head>
 <body>
-    <?php if($_POST["input_event"]==null)
-        $_POST["input_event"]="현빈";?>
+
     <div class="div_mainbar">
         <div class="div_logo">
         <hr class="hr_logo">
@@ -40,7 +39,7 @@
     <div class="div_inputwrapper">
         <h2 class="h2_title">WHO'S THE KOREAN ACTOR YOU ARE INTERESTED IN?</h2>
         <!-- 배우 이름 입력 폼: 검색한 키워드가 korean_actor DB 필터링용으로 사용됨 -->
-        <form method="POST" id="eventForm">
+        <form action="Actor_Page.php" method="POST" id="eventForm">
             <input id='searchEvent' type="text" name="input_event" placeholder="search keyword">
             <input id='searchButton' type="submit" value="ENTER" >
         </form>
