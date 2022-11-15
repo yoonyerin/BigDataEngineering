@@ -23,6 +23,8 @@
 
 .div_ottmovie_section {
     margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .div_favor_list {
@@ -149,7 +151,6 @@ position: absolute;z-index: 1;
     width: 344px;
     margin-left: 10px;
     margin-right: 10px;
-    flex: 1;
     transition: 0.8s;
 }
 .img_favor_list:hover {

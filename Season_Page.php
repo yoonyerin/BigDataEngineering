@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Season_Page</title>
-    <link href="Season_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <link href="Season_Page.css?ver=1.10" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->

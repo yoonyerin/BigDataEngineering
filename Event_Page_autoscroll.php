@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Event_Page</title>
-    <link href="Event_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
+    <link href="Event_Page.css?ver=1.01" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="div_mainbar">
