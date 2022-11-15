@@ -1,5 +1,5 @@
 <?php
-    include './basic_php_files/Movie_Poster_List.php';
+    include 'Movie_Poster_List.php';
 
     function season_poster($mysql, $starting, $ending, $ind,  $class_name, $button_class) {
         $group_by_decade_sql = "select count(*), decade from (select ceil(year(release_date) / 10) * 10 as decade from movies_ott) t group by decade";

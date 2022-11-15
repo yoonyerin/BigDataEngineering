@@ -1,4 +1,4 @@
-<?php include 'Season_Page_Fetch.php'?>
+<?php include './basic_php_files/Season_Page_Fetch.php'?>
 
 <!DOCTYPE html>
 <html lang="en">

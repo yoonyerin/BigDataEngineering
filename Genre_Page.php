@@ -1,4 +1,4 @@
-<?php include 'Genre_Page_Fetch.php' ?>
+<?php include './basic_php_files/Genre_Page_Fetch.php' ?>
 
 
 <!DOCTYPE html>

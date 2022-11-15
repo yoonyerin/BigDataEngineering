@@ -1,3 +1,5 @@
+<?php include './basic_php_files/Event_Page_Fetch.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,110 +69,25 @@
     1) movies Table[discription]에서 이벤트 키워드가 포함된 영화 리스트의 image TABLE[image_url], 
     2) movies TABLE 에서 장르별로 Group 해서 Count
     -->
-    <div class="div_movie_section">
 
-        <div class="div_horizontal1">
-            <div class="div_horizontal">
-                <h2 class="h2_text">CHRISTMAS</h2>
-                <h2 class="h2_text">23개{php}</h2> <!-- 크리스마스에 해당하는 영화 갯수 count -->
-            </div>
-        </div>
-        
-        <div class="div_movie_list">
-            <!-- 크리스마스에 해당하는 영화 포스터 url 
-            데이터 위치: <img class="img_movie_list" src=[php 데이터 삽입] alt="My Image">-->
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-            <!-- 반복문 종료 -->
-        </div>
-    </div>
-    <!-- 이하 동일 -->
-    <div class="div_movie_section">
-        
-        <div class="div_horizontal2">
-            <div class="div_horizontal">
-                <h2 class="h2_text">WEDDING</h2>
-                <h2 class="h2_text">19개{php}</h2>
-            </div>
-        </div>
-        
-        <div class="div_movie_list">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-        </div>
-    </div>
 
     <div class="div_movie_section">
         
-        <div class="div_horizontal3">
-            <div class="div_horizontal">
-                <h2 class="h2_text">FAMILY EVENT</h2>
-                <h2 class="h2_text">22개{php}</h2>
-            </div>
-        </div>
-        
-        <div class="div_movie_list">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-        </div>
-    </div>
-    <div class="div_movie_section">
-        
-        <div class="div_horizontal4">
-            <div class="div_horizontal">
-                <h2 class="h2_text">TEACHER'S DAY</h2>
-                <h2 class="h2_text">22개{php}</h2>
-            </div>
-        </div>
-        
-        <div class="div_movie_list">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-        </div>
-    </div>
-    <div class="div_movie_section">
-        
-        <div class="div_horizontal5">
-            <div class="div_horizontal">
-                <h2 class="h2_text">BIRTHDAY</h2>
-                <h2 class="h2_text">22개{php}</h2>
-            </div>
-        </div>
-        
-        <div class="div_movie_list">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-            <img class="img_movie_list" src="	https://www.themoviedb.org/t/p/w440_and_h660_face/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/un8ZDtx2SMwNwXRYy65aItnNjab.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/5YZ8JKV8i437z6O4YQ2IEzcSlsD.jpg" alt="My Image">
-            <img class="img_movie_list" src="https://www.themoviedb.org/t/p/w440_and_h660_face/bGZn5RVzMMXju4ev7xbl1aLdXqq.jpg" alt="My Image">
-        </div>
+        <!-- 이벤트1 영화 포스터 및 개수를 보여주는 section -->
+        <?php event_poster($mysqli, 'CHRISTMAS', '1', 'h2_text', 'btn_movie_detail'); ?>
+
+        <!-- 이벤트2 영화 포스터 및 개수를 보여주는 section -->
+        <?php event_poster($mysqli, 'WEDDING', '2', 'h2_text', 'btn_movie_detail'); ?>
+
+        <!-- 이벤트3 영화 포스터 및 개수를 보여주는 section -->
+        <?php event_poster($mysqli, 'FAMILY EVENT', '3', 'h2_text', 'btn_movie_detail'); ?>
+
+        <!-- 이벤트4 영화 포스터 및 개수를 보여주는 section -->
+        <?php event_poster($mysqli, "TEACHER'S DAY", '4', 'h2_text', 'btn_movie_detail'); ?>
+
+        <!-- 이벤트5 영화 포스터 및 개수를 보여주는 section -->
+        <?php event_poster($mysqli, 'BIRTHDAY', '5', 'h2_text', 'btn_movie_detail'); ?>
+
     </div>
 
 
