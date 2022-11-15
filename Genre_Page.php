@@ -1,4 +1,4 @@
-<?php include 'Genre_Page_Fetch.php' ?>
+<?php include './basic_php_files/Genre_Page_Fetch.php' ?>
 
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Genre_Page</title>
-    <link href="Genre_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
+    <link href="Genre_Page.css?ver=1.1" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -66,20 +66,20 @@
     <hr class="hr_division">
 
     <!-- 장르1 영화 포스터 및 개수를 보여주는 section -->
-    <?php genre_poster($mysqli, 'Action & Adventure', '1', 'text_green_h2'); ?>
+    <?php genre_poster($mysqli, 'Action & Adventure', '1', 'text_green_h2', 'btn_movie_detail'); ?>
 
     <!-- 장르2 영화 포스터 및 개수를 보여주는 section -->
-    <?php genre_poster($mysqli, 'Fantasy & Animation', '2', 'text_green_h2'); ?>
+    <?php genre_poster($mysqli, 'Fantasy & Animation', '2', 'text_green_h2', 'btn_movie_detail'); ?>
 
 
     <!-- 장르3 영화 포스터 및 개수를 보여주는 section -->
-    <?php genre_poster($mysqli, 'Family & Comedy', '3', 'text_green_h2'); ?>
+    <?php genre_poster($mysqli, 'Family & Comedy', '3', 'text_green_h2', 'btn_movie_detail'); ?>
 
     <!-- 장르4 영화 포스터 및 개수를 보여주는 section -->
-    <?php genre_poster($mysqli, 'Thriller & Horror', '4', 'text_green_h2'); ?>
+    <?php genre_poster($mysqli, 'Thriller & Horror', '4', 'text_green_h2', 'btn_movie_detail'); ?>
 
     <!-- 장르5 영화 포스터 및 개수를 보여주는 section -->
-    <?php genre_poster($mysqli, 'Romance & Music', '5', 'text_green_h2'); ?>
+    <?php genre_poster($mysqli, 'Romance & Music', '5', 'text_green_h2', 'btn_movie_detail'); ?>
 
 
 </body>

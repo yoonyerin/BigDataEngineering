@@ -99,6 +99,13 @@ position: absolute;z-index: 1;
     margin: 20px auto 20px auto;
 }
 
+/* 유진이 추가함! */ 
+.btn_movie_detail {
+    border: 0px solid #00462A;
+    background-color:transparent;
+    display: inline-block;
+}
+
 .h2_text {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
@@ -159,15 +166,19 @@ position: absolute;z-index: 1;
 .div_movie_list {
     width: 96%;
     height: 250px;
-    overflow: auto;
+    /* overflow: auto; */
     white-space: nowrap;
     margin: 20px auto 20px auto;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 15px;
 }
 
 /* 스크롤바 없애기 */
-.div_movie_list::-webkit-scrollbar {
+/* .div_movie_list::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .img_movie_list {
     height: 250px;

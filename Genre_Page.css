@@ -25,7 +25,9 @@
 
 .div_center {
     text-align: center;
-    margin: 10px auto 10px auto;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* 2개의 컴포넌트를 양쪽에 배치 */
@@ -38,16 +40,19 @@
 .div_movie_list {
     width: 96%;
     height: 250px;
-    overflow: auto;
+    /* overflow: auto; */
     white-space: nowrap;
     margin: 20px auto 20px auto;
     display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 15px;
 }
 
 /* 스크롤바 없애기 */
-.div_movie_list::-webkit-scrollbar {
+/* .div_movie_list::-webkit-scrollbar {
     display: none;
-}
+} */
 
 /* -------------------- nav -------------------- */
 
@@ -178,6 +183,12 @@ position: absolute;z-index: 1;
     color: white;
 }
 
+.btn_movie_detail {
+    border: 0px solid #00462A;
+    background-color:transparent;
+    display: inline-block;
+}
+
 /* -------------------- select -------------------- */
 
 .select_decade {
@@ -207,6 +218,6 @@ position: absolute;z-index: 1;
 }
 
 /* 전체 화면에 스크롤바 제거 */
-.html, body::-webkit-scrollbar {
+/* .html, body::-webkit-scrollbar {
     display: none;
-}
+} */

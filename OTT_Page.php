@@ -24,7 +24,7 @@ $val_count = mysqli_num_rows($movie_list);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>OTT_Page</title>
-    <link href="OTT_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
+    <link href="OTT_Page.css?ver=1.01" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->

@@ -3,7 +3,13 @@ include './basic_php_files/mysql_connect.php';
 
 $fav_mids_list=$_POST['fav_mids'];
 $fav_set=implode("', '", $fav_mids_list);
+$fav_string = implode(", ", $fav_mids_list);
 
+#user_id 임시 지정
+$user_id = 1;
+
+$user_fav_sql = "insert into user_fav_db (user_id, mid) values ('".$user_id."', '".$fav_string."') on duplicate key update mid = '".$fav_string."'";
+$user_fav_db_update = mysqli_query($mysqli, $user_fav_sql);
 $sql = "select sum(netflix) as netflix, sum(amazon_prime) as amazon_prime, sum(disney_plus) as disney_plus, sum(hulu) as hulu from movies_ott where mid in ('".$fav_set."')" ;
 $fav_count_list=mysqli_query($mysqli, $sql);
 $fetched_fav=mysqli_fetch_array($fav_count_list);
@@ -33,7 +39,7 @@ $val_count = mysqli_num_rows($movie_list);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>OTT_Page</title>
-    <link href="OTT_Page.css" rel="stylesheet" type="text/css" />
+    <link href="OTT_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -52,7 +58,7 @@ $val_count = mysqli_num_rows($movie_list);
                 <li><a class="text_green" onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                 <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                 <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
-                <li><a onclick="location.href=''">COMMUNITY</a></li>
+                <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
                 <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
             </ul>
         </nav>
@@ -69,7 +75,7 @@ $val_count = mysqli_num_rows($movie_list);
 
     <!-- 사용자가 선택한 OTT에 따른 영화를 보여주는 section -->
     <div class="div_ott_section">
-        <h2 class="text_subtitle"><?php echo $text;?></h2>
+        <h2 class="text_subtitle"><?php echo 'We Recommend You "'.$text . '"';?></h2>
     </div>
 
     <div class="div_ottmovie_section">

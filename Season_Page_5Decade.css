@@ -25,6 +25,9 @@
 
 .div_center {
     text-align: center;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* 2개의 컴포넌트를 양쪽에 배치 */
@@ -180,6 +183,11 @@ position: absolute;z-index: 1;
     border-radius: 1em;
     border: 0;
     margin: 10px;
+}
+
+.btn_movie_detail {
+    border: 0px solid #00462A;
+    background-color:transparent;
 }
 
 /* -------------------- select -------------------- */

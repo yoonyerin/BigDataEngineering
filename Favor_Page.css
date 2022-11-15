@@ -29,6 +29,8 @@
     margin: 0px auto 0px auto;
     text-align: center;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .div_horizontal {
@@ -169,19 +171,40 @@ position: absolute;z-index: 1;
     width: 60%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
+    font-size: 18px;
     color: #D1D1D1;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid #D1D1D1;
-    border-radius: 10%;
-    opacity: 0;
+    border: 0px solid #D1D1D1;
+    border-radius: 5%;
+    opacity: 1;
     transition: all ease 0.5s;
     backdrop-filter: brightness(0.5);
 }
-.text_detail:hover {
+
+.text_title {
+    width: 60%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 20px;
+    color: #D1D1D1;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #D1D1D1;
+    border-radius: 5%;
     opacity: 1;
+    transition: all ease 0.5s;
+    backdrop-filter: brightness(0.5);
+}
+
+.div_description {
+    align-items: center;
+    opacity: 0;
+    transition: all ease 0.5s;
 }
 
 /* -------------------- img -------------------- */
@@ -203,11 +226,11 @@ position: absolute;z-index: 1;
     filter: brightness(1);
     transition: 0.8s;
 }
-.img_favor_list:hover ~ .text_detail{
-    opacity: 1;
-}
 .div_favor_list_chk:hover > .img_favor_list{
     filter: brightness(0.5);
+}
+.div_favor_list_chk:hover > .div_description{
+    opacity: 1;
 }
 
 

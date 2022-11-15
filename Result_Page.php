@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Result_Page</title>
-    <link href="Result_Page.css" rel="stylesheet" type="text/css" />
+    <link href="Result_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="div_mainbar">

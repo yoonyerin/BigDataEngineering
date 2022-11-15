@@ -1,3 +1,23 @@
+<?php include './basic_php_files/mysql_connect.php';
+
+if($_GET['lan']=='eng') {$eng=1;} else {$eng=0;}
+if($eng) {
+    $sql = 'select * , year(release_date) as release_year from movies_ott where mid = '.$_GET['movie_id'];
+    $poster_sql = 'select * from movies_poster where mid = '.$_GET['movie_id'];
+    $result = mysqli_query($mysqli, $sql);
+    $poster_res = mysqli_query($mysqli, $poster_sql);
+    $movie = mysqli_fetch_array($result);
+    $poster = mysqli_fetch_array($poster_res);
+} else {
+    $sql = 'select * as release_year from movies_korean where mid = '.$_GET['movie_id'];
+    $poster_sql = 'select * from movies_kor_poster where mid = '.$_GET['movie_id'];
+    $result = mysqli_query($mysqli, $sql);
+    $poster_res = mysqli_query($mysqli, $poster_sql);
+    $movie = mysqli_fetch_array($result);
+    $poster = mysqli_fetch_array($poster_res);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +53,8 @@
     <hr>
     <div class="movie_detail">
         <div class="left_detail">
-                <h2 class="h2_title">{MOVIE TITLE php}</h2> <!-- php 삽입: 선택한 이미지 url에 매칭되는 movie title 노출 -->
-                <img src=https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xr3oGJYQWLunuw7L5myo4VT8DBz.jpg width="400"> <!--php 삽입(src=): 해당 영화의 이미지 url-->
+                <h2 class="h2_title"><?php echo $movie['original_title']; ?></h2> <!-- php 삽입: 선택한 이미지 url에 매칭되는 movie title 노출 -->
+                <img src=<?php echo $poster['img_src']; ?> width="400"> <!--php 삽입(src=): 해당 영화의 이미지 url-->
         </div>
         
         <div class="right_detail"> 
@@ -43,27 +63,27 @@
             <table border="1">
                 <tr>
                     <td id="column">제목</td>
-                    <td id="detail">{영화제목 데이터 표시php}</td><!--php 삽입: title-->
+                    <td id="detail"><?php echo $movie['original_title']; ?><!--php 삽입: title-->
                 </tr>
                 <tr>
-                    <td id="column">설명</td>
-                    <td id="detail">{설명 데이터 표시php}</td><!--php 삽입: description-->
+                    <td id="column"><?php if($eng){ echo '설명'; } else {echo '감독/작가';} ?></td>
+                    <td id="detail"><?php if($eng) {echo $movie['overview'];} else {echo $movie['director'].' / '.$movie['writer'];} ?></td><!--php 삽입: description-->
                 </tr>
                 <tr>
                     <td id="column">개봉년도</td>
-                    <td id="detail">{개봉년도 데이터 표시php}</td><!--php 삽입: year-->
+                    <td id="detail"><?php echo $movie['release_year']; ?></td><!--php 삽입: year-->
                 </tr>  
                 <tr>
-                    <td id="column">연령제한</td>
-                    <td>{연령 데이터 표시php}</td><!--php 삽입: age-->
+                    <td id="column"><?php if($eng) {echo '홈페이지';} else {echo '출연';}?></td>
+                    <td id="detail"><?php if($eng) {echo $movie['homepage'];} else {echo $movie['cast'];}?></td><!--php 삽입: age-->
                 </tr>  
                 <tr>
-                    <td id="column">상영시간</td>
-                    <td id="detail">{러닝타임 데이터 표시php}</td><!--php 삽입: running_time-->
+                    <td id="column"><?php if($eng) {echo '상영시간';} else {echo '제작사';}?></td>
+                    <td id="detail"><?php if($eng) {echo $movie['runtime'];} else {echo $movie['production'];}?></td><!--php 삽입: running_time-->
                 </tr>  
                 <tr>
                     <td id="column">장르</td>
-                    <td id="detail">{장르 데이터 표시php}</td><!--php 삽입: genre-->
+                    <td id="detail"><?php if($eng) {echo $movie['genres_1'].", ".$movie['genres_2'].", ".$movie['genres_3'];} else {echo $movie['genres'];}?></td><!--php 삽입: genre-->
                 </tr>      
             </table>
             

@@ -1,4 +1,4 @@
-<?php include 'Season_Page_Fetch.php'?>
+<?php include './basic_php_files/Season_Page_Fetch.php'?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,35 +84,44 @@
         비고: [반복문] 하나의 div에 img 제한 X, 아래 코드는 5개의 데이터일 경우
     -->
 
+    <?php 
+    /* requirement satisfying rollup */
+    $groupby_with_rollup_sql = "select decade, decade5, count(*) as counting 
+    from (select ceil(year(release_date) / 10) * 10 as decade, ceil(year(release_date) / 5) * 5 as decade5 from movies_ott) t 
+    group by decade, decade5 with rollup";
+    $movie_count_list=mysqli_query($mysqli, $groupby_with_rollup_sql);
+
+    ?>
+
     <!-- 연도별(~1990) 영화 이미지 포스터 및 개수를 보여주는 section -->
-    <?php season_poster($mysqli, '0', '1990', '1', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 0, 1990, 1, 'h2_text', 'btn_movie_detail', 5);?>
 
     <!-- 연도별(1991~2000) 영화 포스터 및 개수를 보여주는 section -->
-    <?php season_poster($mysqli, '1991', '1995', '2', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 1991, 1995, '2', 'h2_text', 'btn_movie_detail', 5);?>
 
     <!-- 연도별(2001~2010) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '1996', '2000', '3', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 1996, 2000, '3', 'h2_text', 'btn_movie_detail', 5);?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2001', '2005', '4', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 2001, 2005, '4', 'h2_text', 'btn_movie_detail', 5);?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2006', '2010', '5', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 2006, 2010, '5', 'h2_text', 'btn_movie_detail', 5);?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2011', '2015', '6', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 2011, 2015, '6', 'h2_text', 'btn_movie_detail', 5);?>
 
     <!-- 연도별(2011~2020) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2016', '2020', '7', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 2016, 2020, '7', 'h2_text', 'btn_movie_detail', 5);?>
 
     <!-- 연도별(2021~) 영화 포스터 및 개수를 보여주는 section -->
     <!-- 이하 동일 -->
-    <?php season_poster($mysqli, '2021', date('Y'), '8', 'h2_text');?>
+    <?php season_poster($mysqli, $movie_count_list, 2021, date('Y'), '8', 'h2_text', 'btn_movie_detail', 5);?>
 
 </body>
 </html>

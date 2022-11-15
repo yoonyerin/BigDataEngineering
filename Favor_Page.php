@@ -9,7 +9,7 @@ include './basic_php_files/mysql_connect.php';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Favor_Page</title>
-    <link href="Favor_Page.css?ver=1.0" rel="stylesheet" type="text/css" />
+    <link href="Favor_Page.css?ver=1.01" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <!-- 메인바 -->
@@ -97,7 +97,11 @@ include './basic_php_files/mysql_connect.php';
                 echo '
                 <div class="div_favor_list_chk">
                     <img class="img_favor_list" src="' . $f_src_img['img_src'] .'" alt="My Image">
-                    <p class="text_detail">'. $movie['overview'].'</p>
+                    <div class="div_description">
+                        <p class="text_title">'. $movie['original_title'].'</p>
+                        <p class="text_detail">'. $movie['overview'].'</p>
+                    </div>
+                    
                     <label for="'. $mid .'" class="chk_box">
                         <input type="checkbox" name="fav_mids[]" value="'. $mid . '"id="'. $mid .'"/>
                         <span class="on"></span>
