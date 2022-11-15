@@ -25,10 +25,6 @@
 <<<<<<< HEAD
                 <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
                 <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
-=======
-                <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
-                <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
->>>>>>> 365e9f53f78dcfb7c281df0b45d3b9b40eb5428d
             </ul>
         </nav>
         </div>
