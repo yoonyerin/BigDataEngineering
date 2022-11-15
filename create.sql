@@ -10,7 +10,7 @@ USE `team19`;
 -- 테이블 구조 `kor_poster_db`
 --
 
-CREATE TABLE `kor_poster_db` (
+CREATE TABLE `movies_kor_poster` (
   `kor_id` int(11) DEFAULT NULL,
   `kor_poster` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

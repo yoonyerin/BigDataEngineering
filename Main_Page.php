@@ -42,13 +42,8 @@
                         <li><a onclick="location.href='Favor_Page.php'">OTT SERVICE</a></li>
                         <li><a onclick="location.href='Genre_Page.php'">GENRE</a></li>
                         <li><a onclick="location.href='Event_Page_autoscroll.php'">EVENT</a></li>
-<<<<<<< HEAD
                         <li><a onclick="location.href='Community_Page.php'">COMMUNITY</a></li>
                         <li><a onclick="location.href='initial_actor_page.php'">KOREAN ACTOR</a></li>
-=======
-                        <li><a onclick="location.href='Community_Result_Page.php'">COMMUNITY</a></li>
-                        <li><a onclick="location.href='Actor_Page.php'">KOREAN ACTOR</a></li>
->>>>>>> 365e9f53f78dcfb7c281df0b45d3b9b40eb5428d
                     </ul>
                 </nav>
             </div>
@@ -98,12 +93,7 @@
         </div>
         <?php img_layout($mysqli, $rank_arr[1]) ?>
 
-        <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
-            <h2 class="text_rank_green">2</h2>
-            <h2 class="text_rank_green">3</h2>
-            <h2 class="text_rank_green">4</h2>
-        </div>
+        
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
@@ -116,12 +106,8 @@
             <h2 class="text_subtitle">PROFIT</h2>
         </div>
 
-        <div class="div_rank_list_text">
-            <h2 class="text_rank_green">1</h2>
-            <h2 class="text_rank_green">2</h2>
-            <h2 class="text_rank_green">3</h2>
-            <h2 class="text_rank_green">4</h2>
-        </div>
+        <?php img_layout($mysqli, $rank_arr[2]) ?>
+
         <!-- 
             데이터: 영화 포스터 이미지
             테이블, 필드값: ex. image TABLE, image_url
